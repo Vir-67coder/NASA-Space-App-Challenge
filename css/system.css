@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    /* background-color: #000; */
+    overflow: hidden;
+    /* Prevent scrolling */
+    background-image: url('../models/stars.jpg');
+    /* Replace with your image path */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ensures the image covers the entire page */
+}
+
+#container3D {
+    width: 100%;
+    height: 100vh;
+}
+
+#view-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#planet-panel {
+    position: absolute;
+    top: 20px;
+    left: -220px;
+    /* Hide the panel offscreen initially */
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    transition: left 0.3s ease;
+    /* Smooth sliding animation */
+    z-index: 10;
+    /* Make sure the panel is above other elements */
+}
+
+#planet-panel.show {
+    left: 20px;
+    /* Slide into view */
+}
+
+.planet-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.planet-button:hover {
+    background-color: #666;
+    /* Darker on hover */
+}
+
+#speed-controls {
+    position: absolute;
+    top: 100px;
+    /* Adjust as needed */
+    left: 20px;
+    color: white;
+    z-index: 10;
+    /* Ensure it is above 3D elements */
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
